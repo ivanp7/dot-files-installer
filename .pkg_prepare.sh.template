@@ -1,0 +1,40 @@
+#!/bin/sh
+
+CONFIG_NAME="dot-files-@@@@@"
+
+consolidate ()
+{
+    [ "$2" ] || return 1
+    local comment="$2"
+
+    [ -d "$1" ] || return 0
+    cd -- "$1"
+
+    local config_name="$3${CONFIG_NAME}$4"
+
+    [ -f "$config_name" ] && rm -f -- "$config_name"
+
+    for config in $(find . -type f -printf '%P\n' | sort)
+    do
+        echo "$comment $config {{{" >> "$config_name"
+        echo >> "$config_name"
+        cat -- "$config" >> "$config_name"
+        rm -f -- "$config"
+        echo "$comment }}}" >> "$config_name"
+    done
+
+    echo "" >> "$config_name"
+    echo "$comment vim: foldmethod=marker:" >> "$config_name"
+
+    cd -- "$OLDPWD"
+}
+
+# run custom preparation scripts
+PACKAGE_DIR="$PWD"
+
+for script in $(find "../pkg_prepare" -type f -name "*.sh" 2> /dev/null | sort)
+do
+    . "$script"
+    cd -- "$PACKAGE_DIR"
+done
+

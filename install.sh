@@ -4,6 +4,7 @@ cd -- "$(dirname -- "$0")"
 
 cp -f PKGBUILD.template ../PKGBUILD
 cp -f dot-files.install.template ../dot-files.install
+cp -f .pkg_prepare.sh.template ../.pkg_prepare.sh
 
 cd ..
 
@@ -12,6 +13,7 @@ cd ..
 
 sed -i "s:@@@@@:$PACKAGE_POSTFIX:g" PKGBUILD
 sed -i "s:@@@@@:$PACKAGE_POSTFIX:g" dot-files.install
+sed -i "s:@@@@@:$PACKAGE_POSTFIX:g" .pkg_prepare.sh
 
 makepkg -Cfi
 

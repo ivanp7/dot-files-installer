@@ -48,7 +48,7 @@ prepare ()
     done
 
     # prepare package
-    : ${DOT_FILES_PKG_PREPARE:="../installer/.pkg_prepare.sh"}
+    : ${DOT_FILES_PKG_PREPARE:="../.pkg_prepare.sh"}
     "$DOT_FILES_PKG_PREPARE"
 }
 
