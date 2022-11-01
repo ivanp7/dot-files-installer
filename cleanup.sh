@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cd -- "$(dirname -- "$0")"
+cd -- "$(dirname -- "$0")/.."
 
 rm -fv PKGBUILD
 rm -fv dot-files.install
