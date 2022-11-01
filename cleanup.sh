@@ -2,10 +2,10 @@
 
 cd -- "$(dirname -- "$0")/.."
 
-rm -fv PKGBUILD
-rm -fv dot-files.install
+rm -f PKGBUILD
+rm -f dot-files.install
 
-rm -rfv src
-rm -rfv pkg
-rm -fv *.pkg.tar.zst
+rm -rf src
+rm -rf pkg
+rm -f *.pkg.tar.zst
 
