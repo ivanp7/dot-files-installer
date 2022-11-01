@@ -11,6 +11,7 @@ cd ..
 : ${PACKAGE_POSTFIX:="$(git -C . rev-parse --abbrev-ref HEAD 2> /dev/null)"}
 : ${PACKAGE_POSTFIX:="custom"}
 
+sed -i "s,_____,$(cat dependencies),g" PKGBUILD
 sed -i "s:@@@@@:$PACKAGE_POSTFIX:g" PKGBUILD
 sed -i "s:@@@@@:$PACKAGE_POSTFIX:g" dot-files.install
 sed -i "s:@@@@@:$PACKAGE_POSTFIX:g" .pkg_prepare.sh

@@ -4,7 +4,7 @@ pkgname=dot-files-@@@@@
 pkgdesc="Auto-managed dot-files (@@@@@)"
 arch=('any')
 license=('Unlicense')
-depends=(coreutils sudo)
+depends=(coreutils sudo _____)
 
 pkgver=1
 pkgrel=1
