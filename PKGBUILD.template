@@ -104,10 +104,10 @@ case "\$OP" in
     status)
         if user_registered
         then
-            echo "Dot-files are installed for user '\$(id -un)'." 1>&2
+            echo "dot-files-@@@@@ is installed for user '\$(id -un)'." 1>&2
             exit
         else
-            echo "Dot-files are not installed for user '\$(id -un)'." 1>&2
+            echo "dot-files-@@@@@ is not installed for user '\$(id -un)'." 1>&2
             exit 1
         fi
         ;;
