@@ -16,5 +16,5 @@ sed -i "s:@@@@@:$PACKAGE_POSTFIX:g" PKGBUILD
 sed -i "s:@@@@@:$PACKAGE_POSTFIX:g" dot-files.install
 sed -i "s:@@@@@:$PACKAGE_POSTFIX:g" .pkg_prepare.sh
 
-makepkg -Cfi
+makepkg -Cf
 
