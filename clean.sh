@@ -9,4 +9,5 @@ rm -f .pkg_prepare.sh
 rm -rf src
 rm -rf pkg
 rm -f *.pkg.tar.zst
+rm -f *.pkg.tar.zst.sig
 
