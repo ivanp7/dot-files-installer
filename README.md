@@ -29,7 +29,7 @@ There are 5 supported events, each of which has its own shell instruction file:
 * `content/GROUP/CONFIGURATION/reinstall_pre` -- run during reinstallation of the package, before old files are removed
 * `content/GROUP/CONFIGURATION/reinstall_post` -- run during reinstallation of the package, after new files are copied
 * `content/GROUP/CONFIGURATION/uninstall` -- run during uninstallation of the package
-* `content/GROUP/CONFIGURATION/update` -- run only when `dot-files.sh update` is executed (see step 5)
+* `content/GROUP/CONFIGURATION/update` -- run only when `dot-files-{branch}.sh update` is executed (see step 6)
 
 Notice that `install` and `uninstall` instructions are NOT run during reinstallation!
 
