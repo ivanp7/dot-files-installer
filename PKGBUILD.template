@@ -10,7 +10,7 @@ pkgver=1
 pkgrel=1
 pkgver ()
 {
-    date +'%Y.%m.%d'
+    date +'%Y.%m.%d.%H'
 }
 
 install=dot-files.install
